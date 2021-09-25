@@ -1,8 +1,11 @@
 import React, { SyntheticEvent } from 'react';
+import { User } from '../model/Model';
 import { AuthService } from '../services/AuthService';
+import history from '../utils/history';
 
 interface LoginProps {
   authService: AuthService;
+  setUser: (user: User) => void;
 }
 
 interface LoginState {
@@ -43,7 +46,8 @@ export class Login extends React.Component<LoginProps, LoginState> {
     );
     if (result) {
       this.setState({ loginSuccessful: true });
-      console.log(result);
+      this.props.setUser(result);
+      history.push('/profile');
     } else {
       this.setState({ loginSuccessful: false });
       console.log('wrong login');
