@@ -2,6 +2,6 @@ import React from 'react';
 
 export class Home extends React.Component {
   render() {
-    return <div>Home component works</div>;
+    return <div>Welcome to the Home page!</div>;
   }
 }

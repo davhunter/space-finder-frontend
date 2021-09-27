@@ -17,7 +17,9 @@ export class ConfirmModalComponent extends React.Component<ConfirmModalComponent
           <div className="modal-content">
             <h2>Reservation</h2>
             <p className="modalText">{this.props.content}</p>
-            <button onClick={() => this.props.close()}>Close</button>
+            <button className="modalButton" onClick={() => this.props.close()}>
+              Close
+            </button>
           </div>
         </div>
       );

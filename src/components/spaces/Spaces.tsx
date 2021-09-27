@@ -55,6 +55,7 @@ export class Spaces extends React.Component<SpacesProps, SpacesState> {
     for (const space of this.state.spaces) {
       rows.push(
         <SpaceComponent
+          key={space.spaceId}
           location={space.location}
           name={space.name}
           spaceId={space.spaceId}
